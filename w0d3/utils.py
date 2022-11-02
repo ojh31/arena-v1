@@ -19,12 +19,13 @@ def plot_loss_and_accuracy(loss_list, accuracy_list):
         title_text="CNN training loss & test accuracy",
         template="simple_white", 
         xaxis_range=[0, len(loss_list)], 
-        yaxis2_range=[0, 1],
+        yaxis2_range=[0.9, 1],
         yaxis2_tickformat=".0%", 
         hovermode="x unified"
     )
 
     fig.show()
+    return fig
 
 def test_batchnorm2d_module(BatchNorm2d):
     """The public API of the module should be the same as the real PyTorch version."""
